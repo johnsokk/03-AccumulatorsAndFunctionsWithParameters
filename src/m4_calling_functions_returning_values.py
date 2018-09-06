@@ -126,6 +126,15 @@ def sum_of_digits(number):
 
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
+
+    print('--------------------------------')
+    # Test 1:
+    expected = 125
+    answer = sum_of_digits(5**3)
+    print('Test 1 expected', expected)
+    print('actual', answer)
+
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
@@ -162,6 +171,10 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+
+    return (sum_of_digits(n**3))
+
+
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
