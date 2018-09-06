@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 import rosegraphics as rg
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   RUN this program.  Then answer the following,
 #     GETTING HELP AS NEED! (Ask questions!!!)
 #
@@ -41,21 +41,25 @@ import rosegraphics as rg
 #
 #          -- Write the names of three INSTANCE VARIABLEs that Circle
 #             objects have:
-#                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#
+#   rg.Circle().center
+#   rg.Circle().fill_color
+#   rg.Circle().outline_color
 #
 #     f. What does a RoseWindow RENDER method do?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#    Everything that has been attached
 #
 #     g. When is a RoseWindow close_on_mouse_click method call
 #        necessary?  Why?
-#            WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
+#            It's necessary when you want to see what your program did because
+#             it will instantly close if you don't use close_on_mouse_click
 #
 #   ASK QUESTIONS ** NOW ** if you do not understand how the
 #     RoseGraphics graphics system works.
 #
 #   When you are confident that you have written correct answers
 #   to the above questions (ASK QUESTIONS AS NEEDED!),
-#   change the above TODO to DONE.
+#   change the above DONE to DONE.
 #
 ########################################################################
 
@@ -151,7 +155,7 @@ def example3():
     corner2 = rectangle.corner_2
     print(corner1, corner2)  # You can also PRINT RoseGraphics objects.
     print(rectangle)  # See the Console for the output.
-
+    rg.RoseWindow().render()
     # ------------------------------------------------------------------
     # close_on_mouse_click: Keeps the window open until user clicks.
     # ------------------------------------------------------------------
