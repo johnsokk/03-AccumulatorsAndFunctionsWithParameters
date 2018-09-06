@@ -28,13 +28,13 @@ import rosegraphics as rg
 #              Downward
 #
 #     b. Write a line of code that constructs a RoseWindow object:
-          levi =rg.RoseWindow()
+#   levi = rg.RoseWindow()
 #
 #     e. Use the DOT trick to answer the following:
 #
 #          -- Write the names of two types of graphics objects that
 #             you can construct OTHER than Circle and Point:
-#
+#           rg.Arc rg.Ellipse
 #
 #          -- Write the names of three METHODs that Circle objects have:
 #                WRITE_YOUR_ANSWER_HERE,_REPLACING_THIS
