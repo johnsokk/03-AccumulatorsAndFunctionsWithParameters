@@ -128,15 +128,10 @@ def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
 
 
-    # Test 1:
-    expected = 125
-    answer = sum_of_digits(5**3)
-    print('Test 1 expected', expected)
-    print('actual', answer)
 
 
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -161,6 +156,26 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    # Test 1:
+    expected = 8
+    answer = digits_in_cube(5)
+    print('Test 1 expected', expected)
+    print('actual', answer)
+
+    # Test 2
+    expected = 9
+    answer = digits_in_cube(3)
+    print('Test 2 expected', expected)
+    print('actual', answer)
+
+    # Test 3
+    expected = 10
+    answer = digits_in_cube(4)
+    print('Test 3 expected', expected)
+    print('actual', answer)
+
+
+
 
 def digits_in_cube(n):
     """
@@ -174,9 +189,8 @@ def digits_in_cube(n):
 
     return (sum_of_digits(n**3))
 
-
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -190,7 +204,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # DONE: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -200,6 +214,33 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    n = 5
+    k = 2
+    expected = digits_in_power(n,k)
+    answer = 7
+    print('Expected', expected)
+    print('Actual', answer)
+
+    # Test 2
+    n = 6
+    k = 2
+    expected = digits_in_power(6, 2)
+    answer = 9
+    print('Expected', expected)
+    print('Actual', answer)
+
+    # Test 3
+    n = 5
+    k = 3
+    expected = digits_in_power(n, k)
+    answer = 8
+    print('Expected', expected)
+    print('Actual', answer)
+
+
+
 
 
 def digits_in_power(n, k):
@@ -213,8 +254,13 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+    nk = sum_of_digits(n**k)
+    return nk
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -237,6 +283,15 @@ def run_test_fancy_sums_of_digits():
     print('--------------------------------------------------')
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    print(fancy_sums_of_digits(2))
+
+    # Test 2
+    print(fancy_sums_of_digits(1))
+
+    # Test 3
+    print(fancy_sums_of_digits(35))
 
     # ------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
@@ -271,8 +326,19 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+
+    n1000 = n**1000
+    x = sum_of_digits(n1000)
+    n999 = n**999
+    y = sum_of_digits(n999)
+    z = sum_of_digits(x**y)
+    return z
+
+
+
+
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
