@@ -36,11 +36,6 @@ def two_circles():
     window.render()
     window.close_on_mouse_click()
 
-
-
-
-
-
     # ------------------------------------------------------------------
     # DONE: 2. Implement this function, per its green doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
@@ -81,6 +76,10 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+    window = rg.RoseWindow()
+    circle = rg.Circle()
+    circle.fill_color = 'blue'
+
     # ------------------------------------------------------------------
     # TODO: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
